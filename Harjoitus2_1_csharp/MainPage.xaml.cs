@@ -42,5 +42,13 @@ namespace Harjoitus2_1_csharp
                 textBlock.Text = result;
             }
         }
+
+        private void Page_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Escape)
+            {
+                textBox.Text = String.Empty;
+            }
+        }
     }
 }
