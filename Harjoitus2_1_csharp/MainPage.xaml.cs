@@ -26,5 +26,21 @@ namespace Harjoitus2_1_csharp
         {
             this.InitializeComponent();
         }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            String txt = textBox.Text;
+            int amount = txt.Length;
+            if (amount == 1)
+            {
+                String result = amount.ToString() + " merkki.";
+                textBlock.Text = result;
+            }
+            else
+            {
+                String result = amount.ToString() + " merkkiä.";
+                textBlock.Text = result;
+            }
+        }
     }
 }
